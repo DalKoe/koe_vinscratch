@@ -35,9 +35,7 @@ First replace the vin scratch function in rage-boosting/api/server.lua line 114 
 
 	end)
 
-    exports['koe_vendors']:giveCrimLevel(owner.identifier, 15)
-end)
-`
+end)`
 
 Import SQL
 Put in resources
