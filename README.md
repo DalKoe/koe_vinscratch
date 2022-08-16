@@ -19,7 +19,8 @@ To be combined with rahe-boosting, this is a way for police to check if a car is
 #Instructions
 First replace the vin scratch function in rage-boosting/api/server.lua line 114 with the following
 
-`AddEventHandler('rahe-boosting:server:vinScratchSuccessful', function(playerId, vehicleModel, vehicleModelName, licensePlate, vehicleProperties)
+```
+AddEventHandler('rahe-boosting:server:vinScratchSuccessful', function(playerId, vehicleModel, vehicleModelName, licensePlate, vehicleProperties)
 	local owner = ESX.GetPlayerFromId(playerId)
 
 	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, garage_type, garage_id, in_garage, type, vin_scratched) VALUES (@owner, @plate, @vehicle, @garage_type, @garage_id, @in_garage, @type, @vin_scratched)',
@@ -37,8 +38,7 @@ First replace the vin scratch function in rage-boosting/api/server.lua line 114 
 	end)
 
 end)
-
-`
+```
 
 Import SQL
 Put in resources
