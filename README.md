@@ -18,6 +18,7 @@ To be combined with rahe-boosting, this is a way for police to check if a car is
 
 #Instructions
 First replace the vin scratch function in rage-boosting/api/server.lua line 114 with the following
+
 `AddEventHandler('rahe-boosting:server:vinScratchSuccessful', function(playerId, vehicleModel, vehicleModelName, licensePlate, vehicleProperties)
 	local owner = ESX.GetPlayerFromId(playerId)
 
@@ -36,6 +37,7 @@ First replace the vin scratch function in rage-boosting/api/server.lua line 114 
 	end)
 
 end)
+
 `
 
 Import SQL
