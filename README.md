@@ -16,7 +16,7 @@ To be combined with rahe-boosting, this is a way for police to check if a car is
 * [ox_lib](https://github.com/overextended/ox_lib)
 * [Rahe-Boosting](https://forum.cfx.re/t/paid-rahe-boosting-system-esx-qb-custom/4858796)
 
-#Instructions
+# Instructions
 First replace the vin scratch function in rage-boosting/api/server.lua line 114 with the following
 
 ```
