@@ -35,7 +35,8 @@ First replace the vin scratch function in rage-boosting/api/server.lua line 114 
 
 	end)
 
-end)`
+end)
+`
 
 Import SQL
 Put in resources
