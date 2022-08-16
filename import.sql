@@ -17,3 +17,7 @@ ALTER TABLE `seized_pd_vehicles`
 ALTER TABLE `seized_pd_vehicles`
   MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
+
+ALTER TABLE `owned_vehicles` 
+ADD `vin_scratched` INT(1) NOT NULL DEFAULT '0';
+
