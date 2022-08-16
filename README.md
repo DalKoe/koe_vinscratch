@@ -23,12 +23,13 @@ First replace the vin scratch function in rage-boosting/api/server.lua line 114 
 AddEventHandler('rahe-boosting:server:vinScratchSuccessful', function(playerId, vehicleModel, vehicleModelName, licensePlate, vehicleProperties)
 	local owner = ESX.GetPlayerFromId(playerId)
 
-	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, ) VALUES (@owner, @plate, @vehicle)',
+	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle, vin_scratched) VALUES (@owner, @plate, @vehicle, @vin_scratched)',
 	{
 		['@owner']   = owner.identifier,
 		['@plate']   = licensePlate,
 		['@vehicle'] = json.encode(vehicleProperties),
-	}, function (rowsChanged)
+		['@vin_scratched'] = '1',
+		}, function (rowsChanged)
 
 	end)
 
